@@ -15,25 +15,25 @@ struktur dan style tetap sama persis dengan jobsheet-03.
 
 ```
 +--------------------------------------+
-|              SIMPUS-Mini              |
-|----------------------------------------|
-|                                        |
-|         [ Login Petugas ]             |
-|                                        |
+|              SIMPUS-Mini             |
+|--------------------------------------|
+|                                      |
+|         [ Login Petugas ]            |
+|                                      |
 |   Username : [______________]        |
 |   Password : [______________]        |
-|                                        |
-|          [   Masuk   ]                |
+|                                      |
+|          [   Masuk   ]               |
 +--------------------------------------+
 ```
 
 Keterangan notasi:
 
-| Notasi        | Artinya                              |
-|---------------|----------------------------------------|
-| `+ - \|`      | batas luar halaman/panel               |
-| `[______]`    | kotak input -> `<input type="text">`   |
-| `[ Teks ]`    | tombol yang bisa diklik -> `<button>`  |
+| Notasi        | Artinya                                      |
+|---------------|----------------------------------------------|
+| `+ - \|`      | batas luar halaman/panel                     |
+| `[______]`    | kotak input -> `<input type="text">`         |
+| `[ Teks ]`    | tombol yang bisa diklik -> `<button>`        |
 | Teks polos    | label/keterangan -> `<label>`, `<h1>`, `<p>` |
 
 Catatan: field Password nantinya menggunakan `type="password"`.
@@ -43,14 +43,14 @@ Catatan: field Password nantinya menggunakan `type="password"`.
 ```
 +-------------------------------------------------------------+
 | SIMPUS-Mini   Beranda | Buku | Anggota | Peminjaman  Logout |
-|---------------------------------------------------------------|
-|  [Total Buku]   [Total Anggota]   [Sedang Dipinjam]          |
-|                                                                 |
-|  Aksi Cepat:                                                   |
-|  [ + Peminjaman Baru ]   [ + Pengembalian ]                   |
-|                                                                 |
-|  Transaksi Terbaru                                             |
-|  Anggota | Buku | Tgl Pinjam | Status                          |
+|-------------------------------------------------------------|
+|  [Total Buku]   [Total Anggota]   [Sedang Dipinjam]         |
+|                                                             |
+|  Aksi Cepat:                                                |
+|  [ + Peminjaman Baru ]   [ + Pengembalian ]                 |
+|                                                             |
+|  Transaksi Terbaru                                          |
+|  Anggota | Buku | Tgl Pinjam | Status                       |
 +-------------------------------------------------------------+
 ```
 
@@ -80,3 +80,30 @@ supaya tidak lupa diterapkan nanti saat proses coding (jobsheet berikutnya).
 ## 6. Fitur yang dirancang di jobsheet ini
 
 Login, Dashboard Petugas, Peminjaman, Pengembalian, Riwayat.
+
+## 7. Wireframe Registrasi Anggota Baru
+
++--------------------------------------------------+
+|                   SIMPUS-Mini                    |
+|--------------------------------------------------|
+|                                                  |
+|           [ Registrasi Anggota Baru ]            |
+|                                                  |
+|   NIM / NIP     : [__________________________] * |
+|   Nama Lengkap  : [__________________________] * |
+|   Jenis Kelamin : (o) Laki-laki  ( ) Perempuan   |
+|   Program Studi : [-- Pilih Prodi ------- v]     |
+|   Email         : [__________________________]   |
+|   No. WhatsApp  : [__________________________] * |
+|   Alamat        : [__________________________]   |
+|                                                  |
+|   [ Batal ]                         [ Simpan ]   |
+|                                                  |
+|--------------------------------------------------|
+|          Sudah punya akun? [ Login ]             |
++--------------------------------------------------+
+
+## 8. User Flow: Mencari Anggota Lewat Jatuh Tempo
+
+Petugas Login -> Dashboard -> Pilih Menu "Anggota" -> Filter "Jatuh Tempo" 
+-> Ketik Nama / ID -> Tampil Daftar Anggota Menunggak
