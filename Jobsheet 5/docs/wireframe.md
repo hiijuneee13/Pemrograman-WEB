@@ -4,7 +4,7 @@ Dokumen ini berisi rancangan (wireframe) dan alur pengguna (user flow) untuk fit
 Petugas, yang dibuat SEBELUM coding. Tidak ada perubahan HTML/CSS di jobsheet ini -
 struktur dan style tetap sama persis dengan jobsheet-03.
 
-## 1. Aktor
+## 1. Aktor 
 
 | Aktor   | Akses                                                              |
 |---------|---------------------------------------------------------------------|
