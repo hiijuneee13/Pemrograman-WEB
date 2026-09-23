@@ -26,17 +26,38 @@ function initHapusConfirm() {
 }
 
 // ----- 3. Pencarian tabel -----
-function initTableFilter() {
+function initTableFilter(targetColIndex = 0) {
     const input = document.getElementById("search-input");
     const table = document.querySelector("table");
+    const countEl = document.getElementById("search-count"); // 1. Tambah variabel pemanggil elemen
     if (!input || !table) return;
 
     input.addEventListener("keyup", function () {
         const keyword = input.value.toLowerCase();
-        table.querySelectorAll("tbody tr").forEach(function (row) {
-            const teks = row.textContent.toLowerCase();
-            row.style.display = teks.includes(keyword) ? "" : "none";
+        const rows = table.querySelectorAll("tbody tr");
+        
+        let visibleCount = 0; // 2. Variabel buat ngitung baris yang tampil
+        let totalCount = 0;   // 2. Variabel buat ngitung total baris data
+
+        rows.forEach(function (row) {
+            if (row.cells.length <= 1) return; // Lewati baris error/loading
+            
+            totalCount++; // Tambah total baris data
+
+            const judulText = row.cells[targetColIndex] ? row.cells[targetColIndex].textContent.toLowerCase() : "";
+            
+            if (judulText.includes(keyword)) {
+                row.style.display = "";
+                visibleCount++; // Tambah hitungan jika baris cocok
+            } else {
+                row.style.display = "none";
+            }
         });
+
+        // tugas mandiri no 3
+        if (countEl && totalCount > 0) {
+            countEl.textContent = `Menampilkan ${visibleCount} dari ${totalCount} buku`;
+        }
     });
 }
 
@@ -70,6 +91,23 @@ function initValidasiForm() {
             valid = false;
         } else if (judulNama) {
             hapusError(judulNama);
+        }
+
+        // Validasi ISBN (Wajib diisi + Hanya boleh angka & tanda hubung -)
+        const isbn = form.querySelector("[name='isbn']");
+        if (isbn) {
+            const nilaiIsbn = isbn.value.trim();
+            const isbnRegex = /^[0-9-]+$/;
+
+            if (nilaiIsbn === "") {
+                tampilkanError(isbn, "ISBN wajib diisi.");
+                valid = false;
+            } else if (!isbnRegex.test(nilaiIsbn)) {
+                tampilkanError(isbn, "ISBN hanya boleh berisi angka dan tanda hubung (-).");
+                valid = false;
+            } else {
+                hapusError(isbn);
+            }
         }
 
         // Pengarang (khusus form Buku)
@@ -121,6 +159,51 @@ function initValidasiForm() {
         if (!valid) e.preventDefault();
     });
 }
+
+// ===== TUGAS NO. 4: Fungsi Generik Gabungan =====
+async function muatDataGenerik(config) {
+    const tbody = document.getElementById(config.tbodyId);
+    const loading = document.getElementById("loading");
+    if (!tbody) return;
+
+    if (loading) loading.style.display = "block";
+    tbody.innerHTML = "";
+
+    try {
+        // TUGAS NO. 5: Delay diset 3000 ms
+        await new Promise(resolve => setTimeout(resolve, config.delay || 3000));
+
+        const res = await fetch(config.url);
+        if (!res.ok) {
+            throw new Error("Gagal mengambil data (status " + res.status + ")");
+        }
+
+        const dataList = await res.json();
+
+        dataList.forEach(item => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = config.renderRow(item);
+            tbody.appendChild(tr);
+        });
+
+        // Set penghitung awal data
+        const countEl = document.getElementById("search-count");
+        if (countEl) {
+            countEl.textContent = `Menampilkan ${dataList.length} dari ${dataList.length} data`;
+        }
+    } catch (err) {
+        tbody.innerHTML = `<tr><td colspan='${config.colSpan || 5}'>Gagal memuat data: ${err.message}</td></tr>`;
+    } finally {
+        if (loading) loading.style.display = "none";
+    }
+}
+
+// ----- Jalankan semua fungsi setelah DOM siap -----
+document.addEventListener("DOMContentLoaded", function () {
+    initNavToggle();
+    initHapusConfirm();
+    initValidasiForm();
+});
 
 // ----- Jalankan semua fungsi setelah DOM siap -----
 document.addEventListener("DOMContentLoaded", function () {

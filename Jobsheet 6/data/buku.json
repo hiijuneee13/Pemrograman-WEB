@@ -1,12 +1,12 @@
 [
-    { "judul": "Laskar Pelangi", "pengarang": "Andrea Hirata", "tahun": 2005, "isbn": "9789793062792", "stok": 4, "kategori": "fiksi" },
-    { "judul": "Bumi Manusia", "pengarang": "Pramoedya Ananta Toer", "tahun": 1980, "isbn": "9789794610860", "stok": 2, "kategori": "fiksi" },
-    { "judul": "Negeri 5 Menara", "pengarang": "Ahmad Fuadi", "tahun": 2009, "isbn": "9789792248015", "stok": 0, "kategori": "fiksi" },
-    { "judul": "Filosofi Teras", "pengarang": "Henry Manampiring", "tahun": 2018, "isbn": "9786020633343", "stok": 5, "kategori": "non-fiksi" },
-    { "judul": "Ronggeng Dukuh Paruk", "pengarang": "Ahmad Tohari", "tahun": 1982, "isbn": "9789799731215", "stok": 1, "kategori": "fiksi" },
-    { "judul": "Ayat-Ayat Cinta", "pengarang": "Habiburrahman El Shirazy", "tahun": 2004, "isbn": "9789793210021", "stok": 3, "kategori": "fiksi" },
-    { "judul": "Supernova: Ksatria, Puteri, dan Bintang Jatuh", "pengarang": "Dee Lestari", "tahun": 2001, "isbn": "9789799731130", "stok": 2, "kategori": "fiksi" },
-    { "judul": "5 cm", "pengarang": "Donny Dhirgantoro", "tahun": 2005, "isbn": "9789793062563", "stok": 0, "kategori": "fiksi" },
-    { "judul": "Sapiens: Riwayat Singkat Umat Manusia", "pengarang": "Yuval Noah Harari", "tahun": 2011, "isbn": "9786020328490", "stok": 6, "kategori": "non-fiksi" },
-    { "judul": "Atomic Habits", "pengarang": "James Clear", "tahun": 2018, "isbn": "9786020633534", "stok": 7, "kategori": "referensi" }
+  { "judul": "Laskar Pelangi", "pengarang": "Andrea Hirata", "tahun": 2005, "isbn": "9789793062792", "stok": 4, "kategori": "fiksi" },
+  { "judul": "Bumi Manusia", "pengarang": "Pramoedya Ananta Toer", "tahun": 1980, "isbn": "9789794610860", "stok": 2, "kategori": "fiksi" },
+  { "judul": "Negeri 5 Menara", "pengarang": "Ahmad Fuadi", "tahun": 2009, "isbn": "9789792248015", "stok": 0, "kategori": "fiksi" },
+  { "judul": "Filosofi Teras", "pengarang": "Henry Manampiring", "tahun": 2018, "isbn": "9786020633343", "stok": 5, "kategori": "non-fiksi" },
+  { "judul": "Ronggeng Dukuh Paruk", "pengarang": "Ahmad Tohari", "tahun": 1982, "isbn": "9789799731215", "stok": 1, "kategori": "fiksi" },
+  { "judul": "Ayat-Ayat Cinta", "pengarang": "Habiburrahman El Shirazy", "tahun": 2004, "isbn": "9789793210021", "stok": 3, "kategori": "fiksi" },
+  { "judul": "Supernova: Ksatria, Puteri, dan Bintang Jatuh", "pengarang": "Dee Lestari", "tahun": 2001, "isbn": "9789799731130", "stok": 2, "kategori": "fiksi" },
+  { "judul": "5 cm", "pengarang": "Donny Dhirgantoro", "tahun": 2005, "isbn": "9789793062563", "stok": 0, "kategori": "fiksi" },
+  { "judul": "Sapiens: Riwayat Singkat Umat Manusia", "pengarang": "Yuval Noah Harari", "tahun": 2011, "isbn": "9786020328490", "stok": 6, "kategori": "non-fiksi" },
+  { "judul": "Atomic Habits", "pengarang": "James Clear", "tahun": 2018, "isbn": "9786020633534", "stok": 7, "kategori": "non-fiksi" }
 ]
