@@ -3,7 +3,7 @@ $page_title = "Beranda";
 include __DIR__ . "/includes/header.php";
 
 $totalBuku = count($_SESSION["buku"] ?? []);
-$totalAnggota = count($_SESSION["anggota"] ?? []);
+$totalAnggota = count($_SESSION["anggota"] ?? []); 
 ?>
         <section>
             <h2>Selamat Datang di Sistem Perpustakaan Mini</h2>
