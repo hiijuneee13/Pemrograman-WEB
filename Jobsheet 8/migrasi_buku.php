@@ -25,7 +25,7 @@ $daftarBuku = json_decode(file_get_contents($file), true);
 if (!is_array($daftarBuku)) {
     die("Isi data/buku.json bukan JSON array yang valid.\n");
 }
-
+ 
 $cek = $pdo->prepare("SELECT 1 FROM buku WHERE judul = :judul AND pengarang = :pengarang");
 $simpan = $pdo->prepare(
     "INSERT INTO buku (judul, pengarang, tahun, isbn, stok, kategori)

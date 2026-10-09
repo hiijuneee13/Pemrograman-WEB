@@ -47,4 +47,4 @@ foreach ($data_buku as $buku) {
 
 echo "</ul>";
 echo "<p><strong>Migrasi Selesai!</strong> Total Berhasil: $berhasil | Total Gagal: $gagal</p>";
-echo "<a href='buku/list.php'>Lihat Daftar Buku</a>";
+echo "<a href='buku/list.php'>Lihat Daftar Buku</a>";  

@@ -29,5 +29,5 @@ $totalAnggota = $pdo->query("SELECT COUNT(*) FROM anggota")->fetchColumn();
                 <h3>Buku Terlambat</h3>
                 <p>9</p>
             </article>
-        </section>
+        </section>     
 <?php include __DIR__ . "/includes/footer.php"; ?>
