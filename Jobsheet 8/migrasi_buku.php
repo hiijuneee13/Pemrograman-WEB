@@ -9,7 +9,7 @@
 //
 // Aman dijalankan berulang: buku yang judul dan pengarangnya sudah ada dilewati,
 // jadi data tidak ganda.
-
+ 
 if (PHP_SAPI !== "cli") {
     header("Content-Type: text/plain; charset=utf-8");
 }
