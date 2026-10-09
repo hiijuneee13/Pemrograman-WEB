@@ -1,0 +1,26 @@
+[
+    {
+        "judul": "Pemrograman Web dengan PHP dan PostgreSQL",
+        "penulis": "Rizal Maulana",
+        "tahun_terbit": 2024,
+        "isbn": "978-602-8519-93-9",
+        "stok": 15,
+        "kategori": "Teknologi"
+    },
+    {
+        "judul": "Dasar-Dasar Basis Data Relasional",
+        "penulis": "Hakimullah",
+        "tahun_terbit": 2023,
+        "isbn": "978-602-1234-56-7",
+        "stok": 8,
+        "kategori": "Teknologi"
+    },
+    {
+        "judul": "Panduan Praktis UI/UX Design",
+        "penulis": "Junn Studio",
+        "tahun_terbit": 2025,
+        "isbn": "978-979-1122-33-4",
+        "stok": 20,
+        "kategori": "Desain"
+    }
+]
