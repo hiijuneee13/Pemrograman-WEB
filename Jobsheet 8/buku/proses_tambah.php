@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $_SESSION["flash"] = [
             "type"  => "success",
-            "pesan" => "Buku berhasil ditambahkan!"
+            "pesan" => "Buku berhasil ditambahkan!" 
         ];
         header("Location: list.php");
         exit;
